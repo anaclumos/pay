@@ -58,7 +58,7 @@ interface Props {
 export default function SuccessPage({ payment }: Props) {
   return (
     <main className='grid min-h-screen place-items-center'>
-      <div className={`flex flex-col items-center justify-between w-full min-h-screen p-4  ${inter.className}`}>
+      <div className={`flex flex-col items-center justify-between w-full min-h-screen ${inter.className}`}>
         <h1 className='sr-only'>Checkout</h1>
         <div className='m-auto grid grid-cols-1 md:grid-cols-2 w-full'>
           <div className='bg-gray-100 py-24 md:py-24'>
