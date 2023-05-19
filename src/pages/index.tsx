@@ -12,7 +12,7 @@ export default function Home() {
   const customerKey = nanoid()
   const paymentWidgetRef = useRef<PaymentWidgetInstance | null>(null)
   const paymentMethodsWidgetRef = useRef<ReturnType<PaymentWidgetInstance['renderPaymentMethods']> | null>(null)
-  const [price, setPrice] = useState(10)
+  const [price, setPrice] = useState(1)
 
   useAsync(async () => {
     const paymentWidget = await loadPaymentWidget(clientKey, customerKey)
@@ -43,8 +43,9 @@ export default function Home() {
               <div>
                 <p className='text-2xl font-medium tracking-tight text-gray-900'>
                   {' '}
-                  <span>{`₩${price.toLocaleString()}`}</span>
+                  <span>{`${price.toLocaleString()}원`}</span>
                 </p>
+                <p className='text-gray-500 text-md'>Approx 0.001 U.S. Dollar</p>
                 <p className='mt-1 text-sm text-gray-600'>I graciously purchase</p>
               </div>
 
@@ -76,7 +77,6 @@ export default function Home() {
                   <label htmlFor='FirstName' className='block text-xs font-medium text-gray-700'>
                     First Name
                   </label>
-
                   <input type='text' id='FirstName' className='w-full mt-1 border-gray-200 rounded-md shadow-sm sm:text-sm' />
                 </div>
 
@@ -86,7 +86,6 @@ export default function Home() {
                   </label>
                   <input type='text' id='LastName' className='w-full mt-1 border-gray-200 rounded-md shadow-sm sm:text-sm' />
                 </div>
-
                 <div className='col-span-6'>
                   <label htmlFor='Email' className='block text-xs font-medium text-gray-700'>
                     Email

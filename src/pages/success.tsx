@@ -98,19 +98,19 @@ export default function SuccessPage({ payment }: Props) {
 
           <div className='py-12 bg-white md:py-24'>
             <div className='max-w-lg px-4 mx-auto lg:px-8'>
-              <h1 className='p-4 text-2xl font-medium tracking-tight text-gray-900'>Success</h1>
-              <h2 className='p-4 text-xl font-medium tracking-tight text-gray-900'>Order Name</h2>
-              <p className='p-4 font-medium tracking-tight text-gray-900 text-md'>{payment.orderName}</p>
-              <h2 className='p-4 text-xl font-medium tracking-tight text-gray-900'>Approved At</h2>
-              <p className='p-4 font-medium tracking-tight text-gray-900 text-md'>{format(new Date(payment.approvedAt), 'yyyy-MM-dd HH:mm:ss')}</p>
-              <h2 className='p-4 text-xl font-medium tracking-tight text-gray-900'>Receipt</h2>
-              <Link className='p-4 font-medium tracking-tight text-blue-900 text-md' href={payment.receipt.url}>
+              <h1 className='pt-4 text-2xl font-medium tracking-tight text-gray-900'>Success</h1>
+              <h2 className='pt-4 text-xl font-medium tracking-tight text-gray-900'>Order Name</h2>
+              <p className='pt-2 font-medium tracking-tight text-gray-900 text-md'>{payment.orderName}</p>
+              <h2 className='pt-4 text-xl font-medium tracking-tight text-gray-900'>Approved At</h2>
+              <p className='pt-2 font-medium tracking-tight text-gray-900 text-md'>{format(new Date(payment.approvedAt), 'yyyy-MM-dd HH:mm:ss')}</p>
+              <h2 className='pt-4 text-xl font-medium tracking-tight text-gray-900'>Receipt</h2>
+              <Link className='pt-2 font-medium tracking-tight text-blue-900 text-md' href={payment.receipt.url}>
                 Receipt
               </Link>
-              <h2 className='p-4 text-xl font-medium tracking-tight text-gray-900'>Total Amount</h2>
-              <p className='p-4 font-medium tracking-tight text-gray-900 text-md'>{payment.totalAmount}</p>
-              <h2 className='p-4 text-xl font-medium tracking-tight text-gray-900'>Method</h2>
-              <p className='p-4 font-medium tracking-tight text-gray-900 text-md'>{payment.method}</p>
+              <h2 className='pt-4 text-xl font-medium tracking-tight text-gray-900'>Total Amount</h2>
+              <p className='pt-2 font-medium tracking-tight text-gray-900 text-md'>{payment.totalAmount}</p>
+              <h2 className='pt-4 text-xl font-medium tracking-tight text-gray-900'>Method</h2>
+              <p className='pt-2 font-medium tracking-tight text-gray-900 text-md'>{payment.method}</p>
             </div>
           </div>
         </div>
