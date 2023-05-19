@@ -99,17 +99,17 @@ export default function SuccessPage({ payment }: Props) {
           <div className='bg-white py-12 md:py-24'>
             <div className='mx-auto max-w-lg px-4 lg:px-8'>
               <main style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-                <h1>Success</h1>
-                <h2>Order Name</h2>
-                <p>{payment.orderName}</p>
-                <h2>Approved At</h2>
-                <p>{format(new Date(payment.approvedAt), 'yyyy-MM-dd HH:mm:ss')}</p>
-                <h2>Receipt</h2>
+                <h1 className='text-2xl font-medium tracking-tight text-gray-900'>Success</h1>
+                <h2 className='text-2xl font-medium tracking-tight text-gray-900'>Order Name</h2>
+                <p className='text-2xl font-medium tracking-tight text-gray-900'>{payment.orderName}</p>
+                <h2 className='text-2xl font-medium tracking-tight text-gray-900'>Approved At</h2>
+                <p className='text-2xl font-medium tracking-tight text-gray-900'>{format(new Date(payment.approvedAt), 'yyyy-MM-dd HH:mm:ss')}</p>
+                <h2 className='text-2xl font-medium tracking-tight text-gray-900'>Receipt</h2>
                 <Link href={payment.receipt.url}>Receipt</Link>
-                <h2>Total Amount</h2>
-                <p>{payment.totalAmount}</p>
-                <h2>Method</h2>
-                <p>{payment.method}</p>
+                <h2 className='text-2xl font-medium tracking-tight text-gray-900'>Total Amount</h2>
+                <p className='text-2xl font-medium tracking-tight text-gray-900'>{payment.totalAmount}</p>
+                <h2 className='text-2xl font-medium tracking-tight text-gray-900'>Method</h2>
+                <p className='text-2xl font-medium tracking-tight text-gray-900'>{payment.method}</p>
               </main>
             </div>
           </div>
