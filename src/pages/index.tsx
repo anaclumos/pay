@@ -94,7 +94,7 @@ export default function Home() {
 
                   <input type='email' id='Email' className='mt-1 w-full rounded-md border-gray-200 shadow-sm sm:text-sm' />
                 </div>
-                <div id='payment-widget' className='col-span-6 -mx-6'></div>
+                <div id='payment-widget' className='col-span-6 -mx-4'></div>
                 <div className='col-span-6'>
                   <button
                     className='block w-full rounded-md bg-black p-2.5 text-sm text-white transition hover:shadow-lg'
