@@ -33,11 +33,11 @@ export default function Home() {
     <main className='grid min-h-screen place-items-center'>
       <div className={`flex flex-col items-center justify-between w-full min-h-screen ${inter.className}`}>
         <h1 className='sr-only'>Checkout</h1>
-        <div className='m-auto grid grid-cols-1 md:grid-cols-2 w-full'>
-          <div className='bg-gray-100 py-24 md:py-24'>
-            <div className='mx-auto max-w-lg space-y-8 px-4 lg:px-8'>
+        <div className='grid w-full grid-cols-1 m-auto md:grid-cols-2'>
+          <div className='py-24 bg-gray-100 md:py-24'>
+            <div className='max-w-lg px-4 mx-auto space-y-8 lg:px-8'>
               <div className='flex items-center gap-4'>
-                <span className='h-10 w-10 rounded-full bg-blue-700'></span>
+                <span className='w-10 h-10 bg-blue-700 rounded-full'></span>
                 <h2 className='font-medium text-gray-900'>pay.cho.sh</h2>
               </div>
               <div>
@@ -52,7 +52,7 @@ export default function Home() {
                 <div className='flow-root'>
                   <ul className='-my-4 divide-y divide-gray-100'>
                     <li className='flex items-center gap-4 py-4'>
-                      <Image src='https://github.com/anaclumos.png' alt='' width={64} height={64} className='h-16 w-16 rounded object-cover' />
+                      <Image src='https://github.com/anaclumos.png' alt='' width={64} height={64} className='object-cover w-16 h-16 rounded' />
                       <div>
                         <h3 className='text-sm text-gray-900'>Autograph of Sunghyun Cho</h3>
                         <dl className='mt-0.5 space-y-px text-[10px] text-gray-600'>
@@ -69,22 +69,22 @@ export default function Home() {
             </div>
           </div>
 
-          <div className='bg-white py-12 md:py-24'>
-            <div className='mx-auto max-w-lg px-4 lg:px-8'>
+          <div className='py-12 bg-white md:py-24'>
+            <div className='max-w-lg px-4 mx-auto lg:px-8'>
               <form className='grid grid-cols-6 gap-4'>
                 <div className='col-span-3'>
                   <label htmlFor='FirstName' className='block text-xs font-medium text-gray-700'>
                     First Name
                   </label>
 
-                  <input type='text' id='FirstName' className='mt-1 w-full rounded-md border-gray-200 shadow-sm sm:text-sm' />
+                  <input type='text' id='FirstName' className='w-full mt-1 border-gray-200 rounded-md shadow-sm sm:text-sm' />
                 </div>
 
                 <div className='col-span-3'>
                   <label htmlFor='LastName' className='block text-xs font-medium text-gray-700'>
                     Last Name
                   </label>
-                  <input type='text' id='LastName' className='mt-1 w-full rounded-md border-gray-200 shadow-sm sm:text-sm' />
+                  <input type='text' id='LastName' className='w-full mt-1 border-gray-200 rounded-md shadow-sm sm:text-sm' />
                 </div>
 
                 <div className='col-span-6'>
@@ -92,7 +92,7 @@ export default function Home() {
                     Email
                   </label>
 
-                  <input type='email' id='Email' className='mt-1 w-full rounded-md border-gray-200 shadow-sm sm:text-sm' />
+                  <input type='email' id='Email' className='w-full mt-1 border-gray-200 rounded-md shadow-sm sm:text-sm' />
                 </div>
                 <div id='payment-widget' className='col-span-6 -mx-4'></div>
                 <div className='col-span-6'>
