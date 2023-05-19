@@ -45,8 +45,7 @@ export default function Home() {
                   {' '}
                   <span>{`${price.toLocaleString()}원`}</span>
                 </p>
-                <p className='text-gray-500 text-md'>Approx 0.001 U.S. Dollar</p>
-                <p className='mt-1 text-sm text-gray-600'>I graciously purchase</p>
+                <p className='mt-1 text-sm text-gray-600'>≈ 0.001 U.S. Dollar</p>
               </div>
 
               <div>
