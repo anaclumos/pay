@@ -6,7 +6,8 @@ export default function FailPage() {
   return (
     <main style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
       <h1>Fail</h1>
-      <p>{query.message ?? '알 수 없음'}</p>
+      <p>{query.code ?? 'Unknown Code'}</p>
+      <p>{query.message ?? 'Unknown Reason'}</p>
     </main>
   )
 }
