@@ -12,7 +12,7 @@ export default function Home() {
   const customerKey = nanoid()
   const paymentWidgetRef = useRef<PaymentWidgetInstance | null>(null)
   const paymentMethodsWidgetRef = useRef<ReturnType<PaymentWidgetInstance['renderPaymentMethods']> | null>(null)
-  const [price, setPrice] = useState(1)
+  const [price, setPrice] = useState(100000)
 
   useAsync(async () => {
     const paymentWidget = await loadPaymentWidget(clientKey, customerKey)
@@ -29,6 +29,8 @@ export default function Home() {
     paymentMethodsWidget.updateAmount(price, paymentMethodsWidget.UPDATE_REASON.COUPON)
   }, [price])
 
+  let approxExchangeRateFor1USD = 1300
+
   return (
     <main className='grid min-h-screen place-items-center'>
       <div className={`flex flex-col items-center justify-between w-full min-h-screen ${inter.className}`}>
@@ -38,14 +40,21 @@ export default function Home() {
             <div className='max-w-lg px-4 mx-auto space-y-8 lg:px-8'>
               <div className='flex items-center gap-4'>
                 <span className='w-10 h-10 bg-blue-700 rounded-full'></span>
-                <h2 className='font-medium text-gray-900'>pay.cho.sh</h2>
+                <h2 className='font-medium text-gray-900'>Believer Plan</h2>
               </div>
               <div>
                 <p className='text-2xl font-medium tracking-tight text-gray-900'>
                   {' '}
                   <span>{`${price.toLocaleString()}원`}</span>
                 </p>
-                <p className='mt-1 text-sm text-gray-600'>≈ 0.001 U.S. Dollar</p>
+                <p className='mt-1 text-sm text-gray-600'>
+                  ≈{' '}
+                  {(price / approxExchangeRateFor1USD).toLocaleString('en-US', {
+                    style: 'currency',
+                    currency: 'USD',
+                  })}{' '}
+                  U.S. Dollar
+                </p>
               </div>
 
               <div>
@@ -54,11 +63,11 @@ export default function Home() {
                     <li className='flex items-center gap-4 py-4'>
                       <Image src='https://github.com/anaclumos.png' alt='' width={64} height={64} className='object-cover w-16 h-16 rounded' />
                       <div>
-                        <h3 className='text-sm text-gray-900'>Autograph of Sunghyun Cho</h3>
+                        <h3 className='text-sm text-gray-900'>Send a Note to Thousands of Hackers</h3>
                         <dl className='mt-0.5 space-y-px text-[10px] text-gray-600'>
                           <div>
-                            <dt className='inline'>Sent via: </dt>
-                            <dd className='inline'>Email</dd>
+                            As a small reward, you will be able to write a small note of love to +1,000 hackers worldwide, growing 3% daily, with open
+                            rate of 50-60%, at least.
                           </div>
                         </dl>
                       </div>
@@ -102,7 +111,7 @@ export default function Home() {
                       try {
                         await paymentWidget?.requestPayment({
                           orderId: nanoid(),
-                          orderName: 'Autograph of Sunghyun Cho',
+                          orderName: 'hn.cho.sh Believer Plan',
                           customerName:
                             (document.getElementById('FirstName') as HTMLInputElement)?.value +
                             ' ' +

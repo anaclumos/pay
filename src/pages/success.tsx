@@ -81,7 +81,7 @@ export default function SuccessPage({ payment }: Props) {
                     <li className='flex items-center gap-4 py-4'>
                       <Image src='https://github.com/anaclumos.png' alt='' width={64} height={64} className='object-cover w-16 h-16 rounded' />
                       <div>
-                        <h3 className='text-sm text-gray-900'>Autograph of Sunghyun Cho</h3>
+                        <h3 className='text-sm text-gray-900'>hn.cho.sh Believer Plan</h3>
                         <dl className='mt-0.5 space-y-px text-[10px] text-gray-600'>
                           <div>
                             <dt className='inline'>Sent via: </dt>
